@@ -6,7 +6,6 @@ import (
 	"fmt"
 	"os"
 	"strings"
-	"unicode"
 )
 
 // checks if file is found and return it's format or error
@@ -99,16 +98,6 @@ func dictation(m map[string]string) {
 
 	}
 
-}
-
-// checks if any dictionary word is Cyrillic Or Latin and has no spaces
-func containsCyrillicOrLatin(s string) bool {
-	for _, r := range s {
-		if unicode.Is(unicode.Cyrillic, r) || unicode.Is(unicode.Latin, r) {
-			return true
-		}
-	}
-	return false
 }
 
 // provides random word from map for dictation
